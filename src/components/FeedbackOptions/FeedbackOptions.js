@@ -1,10 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import s from './FeedbackOptions.module.css';
 
-export default class FeedbackOptions extends Component { 
-    render() {
-    const { options, onLeaveFeedback } = this.props;
-    
+const FeedbackOptions = ({ options, onLeaveFeedback }) => { 
     return (
       <ul className={s.list}>
         {options.map(option => (
@@ -14,6 +11,7 @@ export default class FeedbackOptions extends Component {
         ))}
         
       </ul>
-    );
-  };
+    )
 };
+
+export default FeedbackOptions;

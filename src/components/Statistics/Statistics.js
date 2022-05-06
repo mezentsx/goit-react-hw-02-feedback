@@ -1,10 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import s from './Statistics.module.css';
 
-export default class Statistics extends Component {
-    render() {
-        const { good, neutral, bad, total, positivePercentage } = this.props;
-
+const Statistics = ({  good, neutral, bad, total, positivePercentage }) => {
         const statistics = [
         { key: "id-1", value: good, name: "Good" },
         { key: "id-2", value: neutral, name: "Neutral" },
@@ -25,7 +22,7 @@ export default class Statistics extends Component {
           </li>
       ))} 
         </ul>
-     
-    );
-  };
+    )
 };
+
+export default Statistics;
